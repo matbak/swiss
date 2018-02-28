@@ -1,0 +1,23 @@
+.brand {
+    width: 102px;
+    display: block;
+
+    @include rwd(small) {
+        width: 130px;
+    }
+    @include rwd(medium) {
+        width: 168px;
+    }
+}
+.brand--smaller {
+    width: 102px;
+    display: block;
+
+    @include rwd(small) {
+        width: 130px;
+    }
+}
+.brand__img {
+    width: 100%;
+    height: auto;
+}

@@ -1,0 +1,52 @@
+@mixin container() {
+  padding: 0 $container-padding;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  @include rwd(large) {
+    max-width: $page-width;
+  }
+}
+
+@mixin row($margin: $grid_columns-padding) {
+  display: flex;
+  flex-wrap: wrap;
+  @if $margin>0 {
+    margin-left: $margin * -1;
+    margin-right: $margin * -1;
+  }
+}
+
+@mixin xs($col, $padding: $grid_columns-padding) {
+  width: (100% / $grid_columns) * $col;
+  @if $padding>0 {
+    padding: $padding;
+  }
+}
+
+@mixin sm($col, $padding: $grid_columns-padding) {
+  @include rwd(small) {
+    width: (100% / $grid_columns) * $col;
+    @if $padding>0 {
+      padding: $padding;
+    }
+  }
+}
+
+@mixin md($col, $padding: $grid_columns-padding) {
+  @include rwd(medium) {
+    width: (100% / $grid_columns) * $col;
+    @if $padding>0 {
+      padding: $padding;
+    }
+  }
+}
+
+@mixin lg($col, $padding: $grid_columns-padding) {
+  @include rwd(large) {
+    width: (100% / $grid_columns) * $col;
+    @if $padding>0 {
+      padding: $padding;
+    }
+  }
+}

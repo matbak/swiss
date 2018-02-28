@@ -1,0 +1,7 @@
+@mixin font-primary() {
+    font-family: $base-primary-font;
+}
+
+@mixin font-secondary() {
+    font-family: $base-secondary-font;
+}

@@ -1,0 +1,73 @@
+$line-height: normal;
+$font-height: 1em;
+
+@font-face {
+	font-family: "svg-icons";
+	src: url("./fonts/svg-icons/svg-icons.eot?f191b39c1ade8ac30ec230d0e1397de8?#iefix") format("embedded-opentype"),
+url("./fonts/svg-icons/svg-icons.woff?f191b39c1ade8ac30ec230d0e1397de8") format("woff"),
+url("./fonts/svg-icons/svg-icons.ttf?f191b39c1ade8ac30ec230d0e1397de8") format("truetype"),
+url("./fonts/svg-icons/svg-icons.svg?f191b39c1ade8ac30ec230d0e1397de8#svg-icons") format("svg");
+}
+
+.icon-svg {
+	line-height: $line-height;
+	font-size: $font-height;
+
+  &::before {
+  	font-family: svg-icons !important;
+  	font-style: normal;
+  	font-weight: normal !important;
+  	vertical-align: top;
+  }
+
+  $icon-sizes: (
+    "sm": 1em,
+    "1-5x": 1.5em,
+    "2x": 2em,
+    "3x": 3em,
+    "4x": 4em,
+  );
+
+  @each $key, $size in $icon-sizes {
+    &.icon-svg-#{$key} {
+      font-size: $size;
+    }
+  }
+
+  &.icon-chevron-down::before {
+  	content: "\f101";
+  }
+
+  &.icon-chevron-left::before {
+  	content: "\f102";
+  }
+
+  &.icon-chevron-long-right::before {
+  	content: "\f103";
+  }
+
+  &.icon-chevron-right::before {
+  	content: "\f104";
+  }
+
+  &.icon-chevron-up::before {
+  	content: "\f105";
+  }
+
+  &.icon-fb::before {
+  	content: "\f106";
+  }
+
+  &.icon-instagram::before {
+  	content: "\f107";
+  }
+
+  &.icon-twitter::before {
+  	content: "\f108";
+  }
+
+  &.icon-youtube::before {
+  	content: "\f109";
+  }
+
+}

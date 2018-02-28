@@ -1,0 +1,30 @@
+.page-header {
+    padding: rem(50) 0;
+    position: relative;
+
+    @include rwd(medium) {
+        padding: rem(88) 0;
+    }
+
+    .container {
+        z-index: 20;
+    }
+
+    &:after {
+        content: '';
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-image: url("../img/pattern-right-top.png");
+        height: 145px;
+        width: 220px;
+        background-size: contain;
+
+        @include rwd(small) {}
+        @include rwd(medium) {
+            height: 195px;
+            width: 300px;
+        }
+    }
+}

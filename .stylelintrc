@@ -1,0 +1,30 @@
+{
+  "plugins": [
+    "stylelint-selector-bem-pattern"
+  ],
+  "rules": {
+    "plugin/selector-bem-pattern": {
+      "componentName": "[A-Z]+",
+      "componentSelectors": {
+        "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+        "combined": "^\\.combined-{componentName}-[a-z]+$"
+      },
+      "utilitySelectors": "^\\.util-[a-z]+$"
+    },
+    "max-nesting-depth": [ 1, {
+      ignore: ["blockless-at-rules"],
+      ignoreAtRules: ["/^include/", "media"]
+    }],
+    "selector-max-id": 0,
+    "color-named": "never",
+    "shorthand-property-no-redundant-values": true,
+    "declaration-block-no-redundant-longhand-properties": true,
+    "no-unknown-animations": true,
+    "function-url-scheme-blacklist": ["/^http/"],
+    "selector-max-class": 2,
+    "declaration-property-value-blacklist": {
+      "transition": ["/^all/"]
+    },
+    "selector-max-universal": 0
+  }
+}

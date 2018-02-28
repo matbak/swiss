@@ -1,0 +1,42 @@
+// Hide / Show
+.hide-xs-down {
+    @include rwdmax(xsmall) {
+        display: none !important;
+    }
+}
+.hide-sm-down {
+    @include rwdmax(small) {
+        display: none !important;
+    }
+}
+.hide-md-down {
+    @include rwdmax(medium) {
+        display: none !important;
+    }
+}
+.hide-lg-down {
+    @include rwdmax(large) {
+        display: none !important;
+    }
+}
+
+.hide-xs-up {
+    @include rwd(xsmall) {
+        display: none !important;
+    }
+}
+.hide-sm-up {
+    @include rwd(small) {
+        display: none !important;
+    }
+}
+.hide-md-up {
+    @include rwd(medium) {
+        display: none !important;
+    }
+}
+.hide-lg-up {
+    @include rwd(large) {
+        display: none !important;
+    }
+}

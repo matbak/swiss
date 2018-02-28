@@ -1,0 +1,15 @@
+.page-footer {
+    position: relative;
+    z-index: 100;
+    background-color: $br7;
+
+    a {
+        color: $br2;
+        text-decoration: none;
+
+        &:hover {
+            color: $br1;
+        }
+
+    }
+}

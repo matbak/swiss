@@ -1,0 +1,13 @@
+/*
+p
+ */
+p {
+    font-size: rem(16);
+    line-height: 1.63;
+    @include rwd(small) {
+        font-size: rem(16);
+    }
+    @include rwd(medium) {
+        font-size: rem(18);
+    }
+}

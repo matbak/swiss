@@ -1,0 +1,71 @@
+/*
+.btn
+ */
+
+.btn {
+    position: relative;
+    text-decoration: none;
+    border-radius: 4px;
+    //line-height: normal;
+    transition: background-color ease 300ms;
+}
+.btn--shadow {
+    transform-origin: right bottom;
+    &:after {
+        content: '';
+        height: 100%;
+        width: 100%;
+        transform-origin: right bottom;
+        transform: translate(8px, 8px);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        border-radius: 4px;
+        transition: all ease 300ms;
+        @include rwd(small) {
+            transform: translate(15px, 15px) scaleY(1) scaleX(0.55);
+        }
+    }
+}
+.btn__text {
+    position: relative;
+}
+
+.btn-type-1 {
+    background-color: $br1;
+    color: $br2;
+
+    &:hover {
+        background-color: darken($br1, 7%);
+
+        @include rwd(small) {
+            &:after {
+                transform: translate(15px, 15px) scaleY(1.54) scaleX(1.16)
+            }
+        }
+
+    }
+
+    &:after {
+        background-color: $br3;
+    }
+}
+
+.btn-xs {
+    padding: rem(4) rem(24);
+}
+.btn-sm {
+    padding: rem(8) rem(16);
+    font-size: 90%;
+}
+.btn-md {
+    padding: rem(12) rem(30);
+    font-size: rem(16);
+    font-weight: 500;
+
+    @include rwd(small) {
+        padding: rem(15) rem(50);
+        font-size: rem(18);
+    }
+}

@@ -1,0 +1,32 @@
+.h1, h1 {
+    font-size: rem(24);
+    @include rwd(small) {
+        font-size: rem(42);
+    }
+    @include rwd(medium) {
+        font-size: rem(42);
+    }
+}
+
+.h3, h3 {
+    font-size: rem(32);
+    @include rwd(small) {
+        font-size: rem(32);
+    }
+    @include rwd(medium) {
+        font-size: rem(36);
+    }
+}
+
+.h5, h5 {
+    font-size: rem(18);
+    @include rwd(small) {
+        font-size: rem(20);
+    }
+    @include rwd(medium) {
+        font-size: rem(20);
+    }
+}
+.h6, h6 {
+    font-weight: 300;
+}

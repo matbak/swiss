@@ -1,0 +1,44 @@
+/*
+a
+a:hover
+ */
+.link {
+    text-decoration: none;
+    transition: color ease 300ms;
+
+    &:hover {
+        color: $br1;
+    }
+}
+.more {
+    color: $br1;
+    text-decoration: none;
+    transition: color ease 300ms;
+    font-size: rem(18);
+    font-weight: 500;
+    position: relative;
+
+    &:after {
+        bottom: -3px;
+        left: 0;
+        height: 2px;
+        width: 0;
+        background-color: $br4;
+        content: '';
+        display: block;
+        transition: width ease 600ms;
+        opacity: 0.3;
+    }
+
+    img {
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+    }
+
+    &:hover {
+        &:after {
+            width: calc(100% - 24px);
+        }
+    }
+}
