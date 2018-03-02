@@ -82,17 +82,17 @@ gulp.task('css', function () {
 });
 
 gulp.task('js', function () {
-    return runSequence('js-vendor', 'js-scripts', 'js-build', function () {
+    return runSequence('js-scripts', 'js-build', function () {
         console.log('JS finish.');
     });
 });
 
-gulp.task('js-vendor', function () {
-    return gulp.src([
-        src + 'js/vendor/*'
-    ]).pipe(concat('vendor.js'))
-        .pipe(gulp.dest(src + 'js/temp'));
-});
+// gulp.task('js-vendor', function () {
+//     return gulp.src([
+//         src + 'js/vendor/*'
+//     ]).pipe(concat('vendor.js'))
+//         .pipe(gulp.dest(src + 'js/temp'));
+// });
 
 gulp.task('js-hint', function () {
     gulp.src([
@@ -111,8 +111,8 @@ gulp.task('js-scripts', ['js-hint'], function () {
         .bundle()
         .pipe(source('main.js'))
         .pipe(buffer())
-        .pipe(gulpif(isDevelopment, sourcemaps.init({loadMaps: true})))
-        .pipe(gulpif(isProduction, uglify()))
+        // .pipe(gulpif(isDevelopment, sourcemaps.init({loadMaps: true})))
+        .pipe(uglify())
         .pipe(concat('modules.js'))
         .pipe(gulpif(isDevelopment, sourcemaps.write('./')))
         .pipe(gulp.dest(src + 'js/temp'));
@@ -120,8 +120,8 @@ gulp.task('js-scripts', ['js-hint'], function () {
 
 gulp.task('js-build', function () {
     return gulp.src([
-        'node_modules/jquery/dist/jquery.js',
-        'node_modules/owl.carousel/dist/owl.carousel.js',
+        // 'node_modules/jquery/dist/jquery.js',
+        // 'node_modules/owl.carousel/dist/owl.carousel.js',
         src + 'js/temp/vendor.js',
         src + 'js/temp/modules.js'
     ]).pipe(gulpif(isDevelopment, sourcemaps.init({loadMaps: true})))

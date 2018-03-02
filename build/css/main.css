@@ -4105,8 +4105,6 @@ p {
   position: absolute;
   text-decoration: none;
   display: block; }
-  .point:focus .point__text {
-    display: block !important; }
 
 .point__pulse {
   width: 8px;
