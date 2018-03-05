@@ -36,21 +36,24 @@
 }
 .point__text {
     position: absolute;
-    font-size: rem(20);
+    font-size: 12px;
     color: $br4;
     font-weight: 600;
     margin: 0;
-    display: none;
+    //display: none;
 
     @include rwd(small) {
-        display: block;
+        font-size: rem(20);
     }
 
     span {
         margin-top:-4px;
-        font-size: rem(16);
+        font-size: 9px;
         font-weight: 500;
         display: block;
+        @include rwd(small) {
+            font-size: rem(16);
+        }
     }
 }
 
@@ -60,8 +63,12 @@
         top: 19%;
     }
     .point__text {
-        left: 18px;
+        left: 12px;
         top: -16px;
+        @include rwd(small) {
+            left: 18px;
+            top: -16px;
+        }
     }
 }
 
@@ -71,12 +78,19 @@
         top: 18%;
     }
     .point__text {
-        left: -35px;
-        top: -13px;
+
+        left: -26px;
+        top: -26px;
+        @include rwd(small) {
+            left: -35px;
+            top: -13px;
+        }
 
         span {
-            margin-left: -43px;
             width: 70px;
+            @include rwd(small) {
+                margin-left: -43px;
+            }
         }
     }
 }
@@ -87,12 +101,17 @@
         top: 16%;
     }
     .point__text {
-        left: 20px;
-        top: -13px;
+        left: 14px;
+        top: -5px;
+        @include rwd(small) {
+            left: 20px;
+            top: -13px;
+        }
 
         span {
             margin-left: -12px;
             width: 70px;
+            @include rwd(small) {}
         }
     }
 }
@@ -104,11 +123,16 @@
     }
     .point__text {
         left: -47px;
-        top: 12px;
+        top: 4px;
+        @include rwd(small) {
+            left: -47px;
+            top: 12px;
+        }
 
         span {
             margin-left: 17px;
             width: 70px;
+            @include rwd(small) {}
         }
     }
 }
@@ -119,16 +143,24 @@
     }
     .point__text {
         width: 100px;
-        left: -27px;
-        top: -45px;
+
+        left: -36px;
+        top: -23px;
 
         @include rwd(small) {
+            left: -40px;
+            top: -55px;
+        }
+        @include rwd(medium) {
             left: 17px;
             top: -13px;
         }
 
         span {
-            margin-left: -5px;
+
+            @include rwd(medium) {
+                margin-left: -5px;
+            }
         }
     }
 }
@@ -150,6 +182,7 @@
 
         span {
             margin-left: 0;
+
         }
     }
 }

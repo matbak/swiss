@@ -4120,46 +4120,62 @@ p {
 
 .point__text {
   position: absolute;
-  font-size: 1.25rem;
+  font-size: 12px;
   color: #282828;
   font-weight: 600;
-  margin: 0;
-  display: none; }
+  margin: 0; }
   @media only screen and (min-width: 768px) {
     .point__text {
-      display: block; } }
+      font-size: 1.25rem; } }
   .point__text span {
     margin-top: -4px;
-    font-size: 1rem;
+    font-size: 9px;
     font-weight: 500;
     display: block; }
+    @media only screen and (min-width: 768px) {
+      .point__text span {
+        font-size: 1rem; } }
 
 .point-berlin.point {
   left: 48.5%;
   top: 19%; }
 
 .point-berlin .point__text {
-  left: 18px;
+  left: 12px;
   top: -16px; }
+  @media only screen and (min-width: 768px) {
+    .point-berlin .point__text {
+      left: 18px;
+      top: -16px; } }
 
 .point-uk.point {
   left: 45%;
   top: 18%; }
 
 .point-uk .point__text {
-  left: -35px;
-  top: -13px; }
+  left: -26px;
+  top: -26px; }
+  @media only screen and (min-width: 768px) {
+    .point-uk .point__text {
+      left: -35px;
+      top: -13px; } }
   .point-uk .point__text span {
-    margin-left: -43px;
     width: 70px; }
+    @media only screen and (min-width: 768px) {
+      .point-uk .point__text span {
+        margin-left: -43px; } }
 
 .point-canada.point {
   left: 13%;
   top: 16%; }
 
 .point-canada .point__text {
-  left: 20px;
-  top: -13px; }
+  left: 14px;
+  top: -5px; }
+  @media only screen and (min-width: 768px) {
+    .point-canada .point__text {
+      left: 20px;
+      top: -13px; } }
   .point-canada .point__text span {
     margin-left: -12px;
     width: 70px; }
@@ -4170,7 +4186,11 @@ p {
 
 .point-swiss .point__text {
   left: -47px;
-  top: 12px; }
+  top: 4px; }
+  @media only screen and (min-width: 768px) {
+    .point-swiss .point__text {
+      left: -47px;
+      top: 12px; } }
   .point-swiss .point__text span {
     margin-left: 17px;
     width: 70px; }
@@ -4181,14 +4201,19 @@ p {
 
 .point-hong-kong .point__text {
   width: 100px;
-  left: -27px;
-  top: -45px; }
+  left: -36px;
+  top: -23px; }
   @media only screen and (min-width: 768px) {
+    .point-hong-kong .point__text {
+      left: -40px;
+      top: -55px; } }
+  @media only screen and (min-width: 992px) {
     .point-hong-kong .point__text {
       left: 17px;
       top: -13px; } }
-  .point-hong-kong .point__text span {
-    margin-left: -5px; }
+  @media only screen and (min-width: 992px) {
+    .point-hong-kong .point__text span {
+      margin-left: -5px; } }
 
 .point-singapore.point {
   left: 79%;
